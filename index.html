@@ -4,13 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voltriem SpA - Energía que se siente, servicio que perdura</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Lucide Icons para íconos profesionales -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
         body { font-family: 'Montserrat', sans-serif; }
@@ -19,185 +16,135 @@
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased">
 
-    <!-- 1. BARRA DE NAVEGACIÓN -->
-    <header class="sticky top-0 z-50 bg-[#1e2d3b] text-white shadow-md">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo Identidad -->
-            <div class="flex items-center space-x-3">
-                <div class="h-10 w-10 bg-[#60af45] rounded-full flex items-center justify-center shadow-inner">
-                    <i data-lucide="zap" class="w-5 h-5 text-[#fcd116]"></i>
-                </div>
-                <span class="text-xl font-bold tracking-wider">VOLTRIEM<span class="text-[#fcd116] ml-1">Spa</span></span>
+    <header class="bg-[#1e2d3b] text-white shadow-md border-b border-slate-800">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="voltriem.png" alt="Voltriem SpA" class="h-14 w-auto object-contain">
             </div>
-            <!-- Menú -->
-            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
-                <a href="#inicio" class="hover:text-[#60af45] transition-colors">Inicio</a>
+            <nav class="hidden lg:flex items-center space-x-6 text-sm font-medium">
+                <a href="#inicio" class="text-[#60af45] hover:underline">Inicio</a>
                 <a href="#servicios" class="hover:text-[#60af45] transition-colors">Servicios</a>
-                <a href="#contacto" class="border border-[#60af45] text-[#60af45] px-4 py-2 rounded font-semibold hover:bg-[#60af45] hover:text-white transition-all">Contacto</a>
-                <a href="https://wa.me/#" target="_blank" class="bg-[#60af45] px-4 py-2 rounded text-white font-semibold hover:bg-[#509639] transition-colors flex items-center space-x-2">
-                    <i data-lucide="phone" class="w-4 h-4"></i>
-                    <span>Cotizar Proyecto</span>
+                <a href="#nosotros" class="hover:text-[#60af45] transition-colors">Nosotros</a>
+                <a href="#cotizar" class="hover:text-[#60af45] transition-colors">Cotizar Proyecto</a>
+                <a href="#contacto" class="hover:text-[#60af45] transition-colors">Contacto</a>
+                <a href="#contacto" class="bg-[#fcd116] text-[#1e2d3b] px-5 py-2.5 rounded-lg font-bold hover:bg-yellow-400 transition-all shadow-md">
+                    Solicitar Asesoría Gratis
                 </a>
             </nav>
         </div>
     </header>
 
-    <!-- 2. SECCIÓN HERO -->
-    <section id="inicio" class="relative bg-[#1e2d3b] text-white py-20 md:py-28 overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#60af45_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <section id="inicio" class="relative bg-[#1e2d3b] text-white overflow-hidden">
+        <div class="absolute right-0 bottom-0 top-0 w-1/3 bg-no-repeat bg-right opacity-5 pointer-events-none hidden md:block" style="background-image: url('voltriem.png'); background-size: contain;"></div>
         
-        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-6 text-center md:text-left">
-                <span class="bg-[#60af45]/20 text-[#60af45] font-bold tracking-widest text-xs uppercase px-3 py-1 rounded-full border border-[#60af45]/30">
-                    Ingeniería Eléctrica y Energías Renovables
-                </span>
+        <div class="container mx-auto px-6 py-12 md:py-20 grid md:grid-cols-2 gap-8 items-center relative z-10">
+            <div class="rounded-xl overflow-hidden shadow-2xl border border-slate-700 aspect-[16/10] relative">
+                <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=1000&q=80" alt="Planta Fotovoltaica" class="w-full h-full object-cover">
+                <div class="absolute bottom-4 left-4 bg-[#1e2d3b]/80 p-2 rounded-lg border border-[#60af45] flex items-center space-x-2">
+                    <i data-lucide="plug-2" class="w-5 h-5 text-[#60af45]"></i>
+                    <span class="text-xs font-semibold">Conexión Inmediata</span>
+                </div>
+            </div>
+
+            <div class="space-y-6 md:pl-6">
                 <h1 class="text-4xl md:text-5xl font-bold leading-tight">
-                    Energía que se siente, <br>
+                    Energía que se siente,<br>
                     <span class="text-[#fcd116]">servicio que perdura.</span>
                 </h1>
-                <p class="text-gray-300 text-base md:text-lg max-w-lg mx-auto md:mx-0">
-                    Diseñamos, instalamos y mantenemos soluciones eléctricas y sistemas fotovoltaicos eficientes bajo estrictas normas SEC para asegurar la continuidad de tus proyectos.
+                <p class="text-gray-300 text-sm md:text-base leading-relaxed max-w-xl">
+                    Diseñamos e instalamos soluciones de energía solar y sistemas eléctricos eficientes para optimizar el consumo de tu empresa o hogar.
                 </p>
-                <div class="pt-4 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
-                    <a href="#contacto" class="inline-flex items-center justify-center bg-[#fcd116] text-[#1e2d3b] font-bold px-8 py-3 rounded shadow-lg hover:bg-yellow-400 transition-all">
-                        <span>Iniciar Asesoría</span>
-                        <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
-                    </a>
-                    <a href="#servicios" class="inline-flex items-center justify-center border border-slate-500 text-white font-semibold px-8 py-3 rounded hover:bg-white/10 transition-all">
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#servicios" class="bg-[#60af45] text-white font-semibold px-6 py-3 rounded-lg hover:bg-[#509639] transition-all">
                         Ver Servicios
                     </a>
-                </div>
-            </div>
-            <!-- Imagen Hero Profesional -->
-            <div class="flex justify-center">
-                <div class="relative w-full max-w-md aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-700">
-                    <img src="https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?auto=format&fit=crop&w=800&q=80" alt="Instalación de Paneles Solares" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#1e2d3b]/80 via-transparent to-transparent"></div>
+                    <a href="#contacto" class="bg-[#fcd116] text-[#1e2d3b] font-bold px-6 py-3 rounded-lg hover:bg-yellow-400 transition-all">
+                        Cotizar Proyecto
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 3. SECCIÓN BENEFICIOS -->
-    <section class="py-12 bg-white border-b border-slate-100">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
-            <div class="p-6 space-y-3 bg-slate-50 rounded-xl border-l-4 border-[#60af45] flex flex-col items-center md:items-start text-center md:text-left">
-                <div class="p-3 bg-[#60af45]/10 rounded-lg text-[#60af45] mb-2">
-                    <i data-lucide="leaf" class="w-6 h-6"></i>
+    <section class="relative z-20 -mt-8 px-6">
+        <div class="container mx-auto grid md:grid-cols-3 gap-6 max-w-6xl">
+            <div class="bg-white p-5 rounded-xl shadow-lg border-t-4 border-[#60af45] flex items-start space-x-4">
+                <div class="p-2.5 bg-emerald-50 text-[#60af45] rounded-lg shrink-0">
+                    <i data-lucide="sun" class="w-6 h-6"></i>
                 </div>
-                <h3 class="text-lg font-bold text-[#1e2d3b]">Sustentabilidad Real</h3>
-                <p class="text-gray-600 text-sm">Reducción inmediata de costos operativos mediante energía solar fotovoltaica avanzada.</p>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-sm md:text-base">100% Sustentable</h3>
+                    <p class="text-gray-500 text-xs mt-1">Reducimos tu huella de carbono.</p>
+                </div>
             </div>
-            <div class="p-6 space-y-3 bg-slate-50 rounded-xl border-l-4 border-[#1e2d3b] flex flex-col items-center md:items-start text-center md:text-left">
-                <div class="p-3 bg-[#1e2d3b]/10 rounded-lg text-[#1e2d3b] mb-2">
-                    <i data-lucide="shield-check" class="w-6 h-6"></i>
+            <div class="bg-white p-5 rounded-xl shadow-lg border-t-4 border-[#1e2d3b] flex items-start space-x-4">
+                <div class="p-2.5 bg-slate-100 text-[#1e2d3b] rounded-lg shrink-0">
+                    <i data-lucide="cog" class="w-6 h-6"></i>
                 </div>
-                <h3 class="text-lg font-bold text-[#1e2d3b]">Certificación SEC</h3>
-                <p class="text-gray-600 text-sm">Garantía y cumplimiento riguroso de todas las normativas eléctricas vigentes en Chile.</p>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-sm md:text-base">Servicio de Ingeniería</h3>
+                    <p class="text-gray-500 text-xs mt-1">Soporte técnico y mantenimiento riguroso.</p>
+                </div>
             </div>
-            <div class="p-6 space-y-3 bg-slate-50 rounded-xl border-l-4 border-[#fcd116] flex flex-col items-center md:items-start text-center md:text-left">
-                <div class="p-3 bg-[#fcd116]/10 rounded-lg text-amber-600 mb-2">
-                    <i data-lucide="cpu" class="w-6 h-6"></i>
+            <div class="bg-white p-5 rounded-xl shadow-lg border-t-4 border-[#fcd116] flex items-start space-x-4">
+                <div class="p-2.5 bg-amber-50 text-amber-600 rounded-lg shrink-0">
+                    <i data-lucide="calculator" class="w-6 h-6"></i>
                 </div>
-                <h3 class="text-lg font-bold text-[#1e2d3b]">Ingeniería y Soporte</h3>
-                <p class="text-gray-600 text-sm">Mantenimientos preventivos planificados para asegurar la continuidad de tu suministro.</p>
+                <div>
+                    <h3 class="font-bold text-slate-900 text-sm md:text-base">Eficiencia Garantizada</h3>
+                    <p class="text-gray-500 text-xs mt-1">Proyectos llave en mano optimizados para generar el máximo ahorro.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 4. SECCIÓN SERVICIOS -->
-    <section id="servicios" class="py-20 bg-slate-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto mb-16">
-                <h2 class="text-3xl font-bold text-[#1e2d3b]">Servicios Integrales</h2>
-                <div class="h-1 w-16 bg-[#60af45] mx-auto mt-4 rounded-full"></div>
-                <p class="text-gray-600 mt-4 text-sm md:text-base">Soluciones técnicas definitivas para el sector residencial, comercial e industrial.</p>
-            </div>
+    <section id="servicios" class="py-16 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-2xl font-bold text-[#1e2d3b] mb-8">Servicios Integrales</h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Servicio 1 -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all group">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1620024920541-2f79f77cd1b4?auto=format&fit=crop&w=600&q=80" alt="Energía Solar Fotovoltaica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+            <div class="grid lg:grid-cols-3 gap-8 items-start">
+                <div class="lg:col-span-2 grid sm:grid-cols-3 lg:grid-cols-3 gap-4">
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
+                        <div class="h-32 bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1620024920541-2f79f77cd1b4?auto=format&fit=crop&w=400&q=80" alt="Fotovoltaico" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <h4 class="font-bold text-xs text-[#1e2d3b]">Sistemas Fotovoltaicos</h4>
+                            <p class="text-gray-500 text-[11px] mt-2 leading-relaxed">Paneles fotovoltaicos en la región, reducimos tu huella de carbono.</p>
+                        </div>
                     </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-[#1e2d3b]">Sistemas Fotovoltaicos</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Dimensionamiento, diseño e instalación de plantas solares On-Grid y Off-Grid para maximizar tu ahorro energético.</p>
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
+                        <div class="h-32 bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=400&q=80" alt="Ingeniería" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <h4 class="font-bold text-xs text-[#1e2d3b]">Proyectos e Ingeniería Eléctrica</h4>
+                            <p class="text-gray-500 text-[11px] mt-2 leading-relaxed">Proyectos e ingeniería eléctrica a escala industrial y comercial.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden flex flex-col h-full">
+                        <div class="h-32 bg-slate-100">
+                            <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=400&q=80" alt="Mantenimiento" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4 flex-grow flex flex-col justify-between">
+                            <h4 class="font-bold text-xs text-[#1e2d3b]">Mantenimiento y Soporte</h4>
+                            <p class="text-gray-500 text-[11px] mt-2 leading-relaxed">Técnicos calificados para dar soporte, mantenimiento y continuidad operacional.</p>
+                        </div>
                     </div>
                 </div>
-                <!-- Servicio 2 -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all group">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=600&q=80" alt="Proyectos Eléctricos" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-[#1e2d3b]">Proyectos Eléctricos SEC</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Montajes industriales, armado de tableros de fuerza, redes de alumbrado, regularizaciones y tramitación de aumentos de capacidad.</p>
-                    </div>
-                </div>
-                <!-- Servicio 3 -->
-                <div class="bg-white rounded-xl shadow-sm border border-slate-100 overflow-hidden hover:shadow-md transition-all group">
-                    <div class="h-52 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Mantenimiento Industrial" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                    </div>
-                    <div class="p-6 space-y-3">
-                        <h3 class="text-lg font-bold text-[#1e2d3b]">Mantenimiento e Inspección</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Planes preventivos para subestaciones, tableros generales y sistemas solares, garantizando operaciones eficientes y seguras.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- 5. SECCIÓN CONTACTO -->
-    <section id="contacto" class="py-20 bg-white">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <div class="bg-[#1e2d3b] text-white rounded-2xl shadow-xl overflow-hidden grid md:grid-cols-5">
-                <div class="md:col-span-2 bg-[#60af45] p-8 flex flex-col justify-between relative overflow-hidden">
-                    <div class="absolute -right-10 -bottom-10 opacity-10 text-white">
-                        <i data-lucide="zap" class="w-40 h-40"></i>
+                <div id="contacto" class="bg-[#1e2d3b] text-white rounded-xl shadow-lg overflow-hidden border border-slate-700">
+                    <div class="p-4 text-center font-bold text-lg bg-[#1e2d3b] tracking-wide">
+                        Solicitar Presupuesto
                     </div>
-                    <div class="space-y-4 relative z-10">
-                        <h3 class="text-2xl font-bold">¿Tienes un proyecto en mente?</h3>
-                        <p class="text-emerald-50 text-xs leading-relaxed">Escríbenos y nuestro equipo técnico te asesorará con la solución óptima y normativa para tu hogar o empresa.</p>
+                    <div class="bg-[#60af45] p-2 text-center text-xs font-semibold text-white">
+                        Contáctanos Hoy
                     </div>
-                    <div class="space-y-2 text-xs text-emerald-100 pt-8 relative z-10">
-                        <div class="flex items-center space-x-2">
-                            <i data-lucide="map-pin" class="w-4 h-4 text-[#fcd116]"></i>
-                            <span>Región del Bío Bío, Chile</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i data-lucide="mail" class="w-4 h-4 text-[#fcd116]"></i>
-                            <span>contacto@voltriem.cl</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="md:col-span-3 p-8 bg-slate-900">
-                    <form class="space-y-4" onsubmit="event.preventDefault(); alert('¡Simulación de envío exitosa! Pronto nos contactaremos.');">
-                        <div>
-                            <label class="block text-[10px] font-bold uppercase text-gray-400 mb-1 tracking-wider">Nombre Completo</label>
-                            <input type="text" required class="w-full bg-slate-800 border border-slate-700 rounded p-2.5 text-sm text-white focus:outline-none focus:border-[#60af45]">
-                        </div>
-                        <div class="grid grid-cols-2 gap-4">
-                            <div>
-                                <label class="block text-[10px] font-bold uppercase text-gray-400 mb-1 tracking-wider">Teléfono</label>
-                                <input type="tel" placeholder="+56 9..." class="w-full bg-slate-800 border border-slate-700 rounded p-2.5 text-sm text-white focus:outline-none focus:border-[#60af45]">
-                            </div>
-                            <div>
-                                <label class="block text-[10px] font-bold uppercase text-gray-400 mb-1 tracking-wider">Correo</label>
-                                <input type="email" required class="w-full bg-slate-800 border border-slate-700 rounded p-2.5 text-sm text-white focus:outline-none focus:border-[#60af45]">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-[10px] font-bold uppercase text-gray-400 mb-1 tracking-wider">Tipo de Requerimiento</label>
-                            <select class="w-full bg-slate-800 border border-slate-700 rounded p-2.5 text-sm text-white focus:outline-none focus:border-[#60af45]">
-                                <option>Energía Solar Fotovoltaica</option>
-                                <option>Proyectos Eléctricos / Certificación SEC</option>
-                                <option>Mantenimiento Industrial / Comercial</option>
-                                <option>Urgencia Técnica o Reparación</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="w-full bg-[#fcd116] text-[#1e2d3b] font-bold py-3 rounded hover:bg-yellow-400 transition-colors mt-2 text-sm uppercase tracking-wider">
+                    <form class="p-5 space-y-3 bg-slate-900" onsubmit="event.preventDefault(); alert('¡Datos recibidos con éxito!');">
+                        <input type="text" placeholder="Name" required class="w-full bg-white text-slate-800 rounded p-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#60af45]">
+                        <input type="email" placeholder="Email" required class="w-full bg-white text-slate-800 rounded p-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#60af45]">
+                        <input type="text" placeholder="Presupuesto / Mensaje" required class="w-full bg-white text-slate-800 rounded p-2 text-xs focus:outline-none focus:ring-2 focus:ring-[#60af45]">
+                        <button type="submit" class="w-full bg-[#fcd116] text-[#1e2d3b] font-bold py-2.5 rounded text-xs uppercase tracking-wider hover:bg-yellow-400 transition-colors">
                             Enviar Solicitud
                         </button>
                     </form>
@@ -206,21 +153,18 @@
         </div>
     </section>
 
-    <!-- 6. PIE DE PÁGINA -->
-    <footer class="bg-slate-950 text-gray-400 py-10 text-xs border-t border-slate-900">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="text-center md:text-left">
-                <span class="text-white font-bold tracking-wider">VOLTRIEM<span class="text-[#fcd116] ml-0.5">Spa</span></span>
-                <p class="text-[11px] text-gray-500 mt-1">Energía que se siente, servicio que perdura.</p>
+    <footer class="bg-[#1e2d3b] text-slate-400 py-8 px-6 text-xs border-t border-slate-800">
+        <div class="container mx-auto max-w-6xl flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div class="flex flex-col items-center sm:items-start">
+                <img src="voltriem.png" alt="Voltriem SpA" class="h-10 w-auto object-contain mb-1">
+                <p class="text-[11px] text-gray-500">Energía que se siente, servicio que perdura.</p>
             </div>
-            <div class="text-center md:text-right space-y-1 text-gray-500">
-                <p>&copy; 2026 Voltriem SpA. Todos los derechos reservados.</p>
-                <p>Ingeniería Eléctrica de Alta Eficiencia.</p>
+            <div class="text-center sm:text-right text-slate-400">
+                Derechos © Voltriem SpA. · All Rights Reserved.
             </div>
         </div>
     </footer>
 
-    <!-- Inicializar íconos de Lucide -->
     <script>
         lucide.createIcons();
     </script>
