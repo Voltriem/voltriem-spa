@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltriem SpA | Soluciones Eléctricas y Servicios Integrales</title>
+    <!-- Fuentes modernas de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0052cc; /* Azul Eléctrico Corporativo */
+            --secondary-color: #0a192f; /* Azul Oscuro Profundo */
+            --accent-color: #ffb703; /* Amarillo Energía */
+            --text-light: #f8f9fa;
+            --text-dark: #333333;
+            --bg-light: #f4f6f9;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: var(--text-dark);
+            line-height: 1.6;
+            background-color: #ffffff;
+        }
+
+        /*--- NAVBAR ---*/
+        header {
+            background-color: var(--secondary-color);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 25px;
+        }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /*--- HERO SECTION ---*/
+        .hero {
+            background: linear-gradient(rgba(10, 25, 47, 0.85), rgba(10, 25, 47, 0.85)), url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--text-light);
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .badge-sec {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 35px;
+            opacity: 0.9;
+        }
+
+        .btn-cta {
+            background-color: var(--primary-color);
+            color: var(--text-light);
+            padding: 14px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0, 82, 204, 0.4);
+        }
+
+        .btn-cta:hover {
+            background-color: #0041a3;
+            transform: translateY(-2px);
+        }
+
+        /*--- SECCIONES COMUNES ---*/
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--secondary-color);
+            margin-bottom: 50px;
+            position: relative;
+            font-weight: 700;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /*--- SERVICIOS ---*/
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: var(--bg-light);
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-bottom: 4px solid transparent;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+            border-bottom: 4px solid var(--primary-color);
+        }
+
+        .service-card i {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        /*--- SOBRE NOSOTROS ---*/
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 50px;
+            border-radius: 12px;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--accent-color);
+        }
+
+        .about-features {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-features li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-features i {
+            color: var(--accent-color);
+            margin-right: 12px;
+            font-size: 1.1rem;
+        }
+
+        /*--- CONTACTO ---*/
+        .contact-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .contact-info {
+            background-color: var(--bg-light);
+            padding: 40px;
+            border-radius: 8px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .info-item i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 20px;
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 82, 204, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+        }
+
+        .info-item h4 {
+            font-size: 1.1rem;
+            color: var(--secondary-color);
+        }
+
+        /*--- FOOTER ---*/
+        footer {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /*--- WHATSAPP FLOTANTE ---*/
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+            .about-container { flex-direction: column; padding: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">VOLTRIEM<span>SpA</span></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="badge-sec"><i class="fa-solid fa-user-shield"></i> Instalador Certificado Clase B SEC</div>
+            <h1>Soluciones Eléctricas y Servicios Integrales</h1>
+            <p>Garantizamos continuidad operativa, seguridad y cumplimiento estricto de la normativa vigente en Concepción, Penco y toda la Región del Bío-Bío.</p>
+            <a href="#contacto" class="btn-cta"><i class="fa-solid fa-file-invoice-dollar"></i> Cotizar Servicio</a>
+        </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios">
+        <h2 class="section-title">Nuestros Servicios</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-house-lightning"></i>
+                <h3>Instalaciones Residenciales</h3>
+                <p>Montajes eléctricos, tableros de distribución, aumentos de capacidad y cableado estructurado bajo norma SEC.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid = fa-industry"></i>
+                <h3>Electricidad Industrial</h3>
+                <p>Mantenimiento preventivo, tableros de fuerza y control, automatización y optimización de sistemas de transferencia y correas transportadoras.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-solar-panel"></i>
+                <h3>Sistemas Fotovoltaicos</h3>
+                <p>Estudios de eficiencia energética, diseño e implementación de proyectos de energía solar sustentable.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="nosotros">
+        <div class="about-container">
+            <div class="about-text">
+                <h3>Compromiso, Norma y Seguridad Profesional</h3>
+                <p>En Soluciones Eléctricas y Servicios Integrales Voltriem SpA nos dedicamos a entregar ingeniería de primer nivel. Destacamos por dar soluciones reales a problemas complejos, priorizando la seguridad y utilizando herramientas avanzadas como diseños asistidos en AutoCAD y simulaciones en Dialux.</p>
+                <ul class="about-features">
+                    <li><i class="fa-solid fa-circle-check"></i> Técnico en Electricidad Industrial e Instalador Clase B SEC.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Diseños lumínicos y planos eléctricos bajo normativas chilenas.</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Cobertura ágil y profesional en la Región del Bío-Bío.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+        <h2 class="section-title">Contacto Directo</h2>
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>
+                        <h4>Correo Electrónico</h4>
+                        <p>contacto@voltriem.cl</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>
+                        <h4>Área de Cobertura</h4>
+                        <p>Concepción, Penco y alrededores, Región del Bío-Bío.</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h4>Horario de Atención</h4>
+                        <p>Lunes a Viernes: 08:30 a 18:30 hrs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Voltriem SpA. Todos los derechos reservados. Ingeniería y Servicios Eléctricos Profesionales.</p>
+    </footer>
+
+    <!-- WHATSAPP FLOTANTE -->
+    <!-- Puedes cambiar el enlace agregando tu número después de '569' si lo deseas -->
+    <a href="https://wa.me/569?text=Hola%20Voltriem%20SpA,%20necesito%20una%20cotizacion%20electrica" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
